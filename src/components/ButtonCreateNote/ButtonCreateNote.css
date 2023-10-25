@@ -1,0 +1,15 @@
+button.create-note {
+	background-color: var(--header-color);
+	font-size: 1.2em;
+	padding: 0.5em 1em;
+	border: var(--border);
+	box-shadow: var(--box-shadow);
+	border-radius: 0.5em;
+	transition: var(--transition);
+	cursor: pointer;
+}
+
+button.create-note:hover {
+	box-shadow: var(--box-shadow-hover);
+	filter: brightness(90%);
+}

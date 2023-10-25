@@ -1,0 +1,42 @@
+.container-box {
+	position: relative;
+}
+
+.box {
+	width: 40px;
+	height: 40px;
+	background-color: var(--light-gray);
+	border: var(--border);
+	border-radius: 5px;
+	transition: var(--transition);
+}
+
+input.box {
+	visibility: hidden;
+}
+
+input.box:checked + label {
+	box-shadow: var(--box-shadow);
+}
+
+label {
+	position: absolute;
+	left: 0;
+	cursor: pointer;
+}
+
+.yellow {
+	background-color: var(--medium-yellow);
+}
+
+.blue {
+	background-color: var(--medium-blue);
+}
+
+.pink {
+	background-color: var(--medium-pink);
+}
+
+.green {
+	background-color: var(--medium-green);
+}
