@@ -1,0 +1,17 @@
+.notes h3 {
+	font-size: 1.8rem;
+}
+
+.notes-container {
+	margin: 20px auto;
+	margin-top: 20px;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px;
+}
+
+@media screen and (max-width: 700px) {
+	.notes-container {
+		justify-content: center;
+	}
+}

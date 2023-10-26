@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 
-import Note from "./Note";
+import Note from "./Note/Note";
+
+import "./Notes.css"
 
 function Notes() {
 	const [notes, setNotes] = useState([]);
@@ -14,11 +16,14 @@ function Notes() {
 	}, []);
 
 	return (
-		<section>
-			{notes.length > 0 &&
-				notes.map((note) => (
-					<Note title={note.title} content={note.content} color={note.color} />
-				))}
+		<section className="notes">
+			<h3>Suas notas</h3>
+			<div className="notes-container">
+				{notes.length > 0 &&
+					notes.map((note) => (
+						<Note title={note.title} content={note.content} color={note.color} />
+					))}
+			</div>
 		</section>
 	);
 }

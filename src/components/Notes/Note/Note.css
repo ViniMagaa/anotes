@@ -1,0 +1,70 @@
+.note {
+	width: 240px;
+	border-radius: 0.5em;
+	overflow: hidden;
+	transition: 0.2s;
+	background-color: var(--light-yellow);
+	box-shadow: var(--box-shadow);
+	border: var(--border);
+}
+
+.note:hover {
+	box-shadow: var(--box-shadow-hover);
+}
+
+.note-title {
+	padding: 8px;
+	font-weight: 700;
+	border-bottom: var(--border);
+	background-color: var(--medium-yellow);
+}
+
+.note-content {
+	width: 100%;
+	padding: 10px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.note-content p {
+	margin-bottom: 10px;
+}
+
+.note-content .action-buttons {
+	display: flex;
+	justify-content: flex-end;
+	gap: 5px;
+}
+
+.yellow-title {
+	background-color: var(--medium-yellow);
+}
+
+.yellow-content {
+	background-color: var(--light-yellow);
+}
+
+.blue-title {
+	background-color: var(--medium-blue);
+}
+
+.blue-content {
+	background-color: var(--light-blue);
+}
+
+.pink-title {
+	background-color: var(--medium-pink);
+}
+
+.pink-content {
+	background-color: var(--light-pink);
+}
+
+.green-title {
+	background-color: var(--medium-green);
+}
+
+.green-content {
+	background-color: var(--light-green);
+}

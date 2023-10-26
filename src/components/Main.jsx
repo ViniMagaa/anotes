@@ -1,5 +1,5 @@
 import Description from "./Description";
-import Notes from "./Notes";
+import Notes from "./Notes/Notes";
 import FormNewNote from "./FormNewNote/FormNewNote";
 
 function Main() {
@@ -7,7 +7,7 @@ function Main() {
 		<main>
 			<Description />
 			<Notes />
-			<FormNewNote  />
+			<FormNewNote />
 		</main>
 	);
 }

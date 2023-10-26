@@ -1,9 +1,13 @@
+import { BiSolidMoon } from "react-icons/bi";
+
 function Header() {
 	return (
 		<header>
 			<h1>aNotes</h1>
 			<nav>
-				<button className="mode">🌙</button>
+				<button className="mode">
+					<BiSolidMoon />
+				</button>
 				<div className="hamburger">
 					<div></div>
 					<div></div>
