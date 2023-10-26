@@ -37,7 +37,7 @@ nav button.mode {
 	box-shadow: var(--box-shadow);
 	transition: 0.3s;
 	cursor: pointer;
-	z-index: 999;
+	z-index: 100;
 }
 
 nav button.mode:hover {
@@ -51,7 +51,7 @@ nav .hamburger {
 	flex-direction: column;
 	justify-content: space-between;
 	cursor: pointer;
-	z-index: 999;
+	z-index: 100;
 }
 
 nav .hamburger div {
@@ -67,11 +67,14 @@ nav ul {
 	gap: 30px;
 }
 
+nav ul li,
 nav ul li a {
 	color: var(--text-color);
 	text-decoration: none;
+	cursor: pointer;
 }
 
+nav ul li:hover,
 nav ul li a:hover {
 	text-decoration: underline;
 }

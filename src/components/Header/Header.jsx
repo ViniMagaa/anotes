@@ -1,11 +1,19 @@
 import { BiSolidMoon } from "react-icons/bi";
 
 import "./Header.css";
+import { useContext } from "react";
+import NotesContext from "../../context/NotesContext";
 
 function Header() {
+	const { setIsFormNewNoteVisible } = useContext(NotesContext);
+
 	function toggleMenu() {
 		const nav = document.getElementById("nav-bar");
 		nav.classList.toggle("active");
+	}
+
+	function handleCreateNote() {
+		setIsFormNewNoteVisible(true);
 	}
 
 	return (
@@ -21,15 +29,11 @@ function Header() {
 					<div></div>
 				</div>
 				<ul>
-					<li>
-						<a href="/">Cria nota</a>
-					</li>
+					<li onClick={handleCreateNote}>Criar uma nota</li>
 					<li>
 						<a href="#notes">Minhas notas</a>
 					</li>
-					<li>
-						<a href="/">Compartilhar</a>
-					</li>
+					<li>Compartilhar</li>
 				</ul>
 			</nav>
 		</header>
