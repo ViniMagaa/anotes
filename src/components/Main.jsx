@@ -1,4 +1,4 @@
-import Description from "./Description";
+import Description from "./Description/Description";
 import Notes from "./Notes/Notes";
 import FormNewNote from "./FormNewNote/FormNewNote";
 

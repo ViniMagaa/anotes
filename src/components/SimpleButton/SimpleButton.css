@@ -1,31 +1,31 @@
 .simple-button {
-  display: flex;
-  padding: 5px;
-  font-size: 1.2rem;
-  border-radius: 5px;
-  border: none;
-  border: var(--border);
-  background-color: var(--medium-yellow);
-  cursor: pointer;
-  transition: 0.3s;
+	display: flex;
+	padding: 5px;
+	font-size: 1.2rem;
+	border-radius: 5px;
+	border: none;
+	border: var(--border);
+	background-color: var(--medium-yellow);
+	cursor: pointer;
+	transition: 0.3s;
 }
 
 .simple-button:hover {
-  filter: brightness(90%);
+	filter: brightness(90%);
 }
 
 .yellow-button {
-  background-color: var(--medium-yellow);
+	background-color: var(--medium-yellow);
 }
 
 .blue-button {
-  background-color: var(--medium-blue);
+	background-color: var(--medium-blue);
 }
 
 .pink-button {
-  background-color: var(--medium-pink);
+	background-color: var(--medium-pink);
 }
 
 .green-button {
-  background-color: var(--medium-green);
+	background-color: var(--medium-green);
 }

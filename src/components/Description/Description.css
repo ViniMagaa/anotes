@@ -1,0 +1,22 @@
+.description {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+	padding-bottom: 2rem;
+	margin-bottom: 3rem;
+	border-bottom: 3px solid var(--header-color);
+}
+
+.description h2 {
+	max-width: 350px;
+	font-size: 2.5rem;
+	line-height: 3rem;
+	margin-bottom: 1rem;
+}
+
+.description h2 span {
+	color: var(--span-color);
+	font-size: 4rem;
+	font-weight: 900;
+}
