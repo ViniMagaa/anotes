@@ -7,7 +7,7 @@ function Main() {
 		<main>
 			<Description />
 			<Notes />
-			<FormNewNote />
+			<FormNewNote  />
 		</main>
 	);
 }

@@ -1,12 +1,24 @@
+import React, { useState, useEffect } from "react";
+
 import Note from "./Note";
 
 function Notes() {
-	const notas = ["nota1", "nota2", "nota3"];
+	const [notes, setNotes] = useState([]);
+
+	useEffect(() => {
+		setNotes(
+			localStorage.length > 0
+				? JSON.parse(localStorage.getItem("notes-data"))
+				: []
+		);
+	}, []);
 
 	return (
 		<section>
-			{notas.length > 0 &&
-				notas.map((nota) => <Note title={nota} content={nota} />)}
+			{notes.length > 0 &&
+				notes.map((note) => (
+					<Note title={note.title} content={note.content} color={note.color} />
+				))}
 		</section>
 	);
 }

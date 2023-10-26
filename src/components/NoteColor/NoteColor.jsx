@@ -1,8 +1,6 @@
-import ColorBox from "./ColorBox/ColorBox";
-
 import "./NoteColor.css";
 
-function NoteColor() {
+function NoteColor({ onColorChange }) {
 	const colors = ["yellow", "blue", "pink", "green"];
 
 	return (
@@ -10,9 +8,24 @@ function NoteColor() {
 			<strong>Cor da Nota:</strong>
 			<div className="colors-container">
 				{colors.length > 0 &&
-					colors.map((color) => (
-						<ColorBox color={color} whatSelectedColor={colors[0]} />
-					))}
+					colors.map((color, index) => {
+						return (
+							<div className="container-box" key={index}>
+								<input
+									type="radio"
+									name="color"
+									id={`${color}-box`}
+									className="box"
+									defaultChecked={color === "yellow" ? true : false}
+									onClick={() => onColorChange(color)}
+								/>
+								<label
+									htmlFor={`${color}-box`}
+									className={`box ${color}`}
+								></label>
+							</div>
+						);
+					})}
 			</div>
 		</div>
 	);
