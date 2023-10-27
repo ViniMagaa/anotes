@@ -6,7 +6,7 @@ Um projeto em React que permite a criação e edição de anotações. Essa é u
 
 - [x] Criar notas
 - [x] Selecionar cor da nota
-- [ ] Editar
-- [ ] Excluir
+- [x] Editar
+- [x] Excluir
 - [ ] Modo Escuro 🌙
 - [x] Salvamento no LocalStorage

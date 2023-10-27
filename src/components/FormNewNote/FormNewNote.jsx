@@ -11,12 +11,13 @@ import NotesContext from "../../context/NotesContext";
 function FormNewNote() {
 	const [title, setTitle] = useState("");
 	const [content, setContent] = useState("");
-	const [color, setColor] = useState("yellow");
+	const [color, setColor] = useState("");
 
 	const [haveTitle, setHaveTitle] = useState(false);
 	const [haveContent, setHaveContent] = useState(false);
 
-	const { isFormNewNoteVisible, setIsFormNewNoteVisible } = useContext(NotesContext);
+	const { isFormNewNoteVisible, setIsFormNewNoteVisible } =
+		useContext(NotesContext);
 	const { notes, setNotes } = useContext(NotesContext);
 
 	const errorTitle = document.getElementById("error-title");
@@ -38,7 +39,8 @@ function FormNewNote() {
 	function handleClose() {
 		setTitle("");
 		setContent("");
-		setColor("yellow");
+		setHaveTitle(false);
+		setHaveContent(false);
 		setIsFormNewNoteVisible(false);
 	}
 
@@ -57,19 +59,23 @@ function FormNewNote() {
 		} else if (!haveContent) {
 			errorContent.style.display = "block";
 			return;
+		} else {
+			const newNoteData = {
+				id: notes.length,
+				title,
+				content,
+				color,
+			};
+
+			setNotes([newNoteData, ...notes]);
+			localStorage.setItem(
+				"notes-data",
+				JSON.stringify([newNoteData, ...notes])
+			);
+
+			// close form
+			handleClose();
 		}
-
-		const newNoteData = {
-			title,
-			content,
-			color,
-		};
-		
-		setNotes([newNoteData, ...notes ]);
-		localStorage.setItem("notes-data", JSON.stringify([newNoteData, ...notes]));
-
-		// close form
-		handleClose();
 	}
 
 	function handleColorChange(color) {

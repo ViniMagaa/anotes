@@ -28,9 +28,10 @@ function Notes() {
 		<section id="notes">
 			<h3>Suas notas</h3>
 			<div className="notes-container">
-				{notes.length  && notes.length > 0 ? (
+				{notes.length && notes.length > 0 ? (
 					notes.map((note, index) => (
 						<Note
+							id={note.id}
 							title={note.title}
 							content={note.content}
 							color={note.color}

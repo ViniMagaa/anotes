@@ -1,8 +1,8 @@
-import "./SimpleButton.css"
+import "./SimpleButton.css";
 
-function SimpleButton({ content, color }) {
+function SimpleButton({ content, color, handleClick }) {
 	return (
-		<button className={`simple-button ${color}-button`}>
+		<button className={`simple-button ${color}-button`} onClick={handleClick}>
 			{content}
 		</button>
 	);
