@@ -7,11 +7,11 @@ import "./Note.css";
 
 function Note({ title, content, color }) {
 	return (
-		<div className="note">
+		<div className={`note ${color}-content`}>
 			<div className={`note-title ${color}-title`}>
 				<h1>{title}</h1>
 			</div>
-			<div className={`note-content ${color}-content`}>
+			<div className="note-content">
 				<p>{content}</p>
 				<div className="action-buttons">
 					<SimpleButton content={<BiEdit />} color={color} />
