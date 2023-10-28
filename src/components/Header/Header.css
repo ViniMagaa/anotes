@@ -25,25 +25,6 @@ nav {
 	margin-left: 30px;
 }
 
-nav button.mode {
-	width: 30px;
-	height: 30px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	background-color: #5791fd;
-	border: var(--border);
-	border-radius: 5px;
-	box-shadow: var(--box-shadow);
-	transition: 0.3s;
-	cursor: pointer;
-	z-index: 100;
-}
-
-nav button.mode:hover {
-	box-shadow: var(--box-shadow-hover);
-}
-
 nav .hamburger {
 	width: 60px;
 	height: 40px;

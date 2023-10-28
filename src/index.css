@@ -1,25 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900;1000&display=swap");
 
-:root {
-	--bg-color: #f9f3e5;
-	--header-color: var(--medium-yellow);
-	--span-color: var(--medium-blue);
-	--text-color: var(--dark-gray);
-	--light-yellow: #f5d89a;
-	--medium-yellow: #ffd16f;
-	--light-blue: #9abaf5;
-	--medium-blue: #5791fd;
-	--light-pink: #f59ac8;
-	--medium-pink: #ff79bc;
-	--light-green: #9af59a;
-	--medium-green: #5de35d;
-	--light-gray: #a09886;
-	--dark-gray: #33322e;
-	--border: 3px solid var(--dark-gray);
-	--box-shadow: 3px 3px 0px var(--dark-gray);
-	--box-shadow-hover: 7px 7px 0px var(--dark-gray);
-}
-
 * {
 	margin: 0;
 	padding: 0;
@@ -27,6 +7,7 @@
 	font-family: "Nunito", "Segoe UI", sans-serif;
 	outline: none;
 	color: var(--text-color);
+	scroll-behavior: smooth;
 }
 
 body {

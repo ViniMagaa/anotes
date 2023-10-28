@@ -7,28 +7,24 @@ import "./Notes.css";
 
 function Notes() {
 	const { notes, setNotes } = useContext(NotesContext);
+	localStorage.setItem("notes-data", localStorage.getItem("notes-data") || []);
+
+	useEffect(() => {
+		const storedNotes = localStorage.getItem("notes-data");
+		setNotes(storedNotes ? JSON.parse(storedNotes) : []);
+	}, [setNotes]);
 
 	window.addEventListener("storage", (e) => {
 		if (e.key === "notes-data") {
-			const updatedNotes = JSON.parse(e.newValue);
-			setNotes(updatedNotes);
+			setNotes(JSON.parse(e.newValue));
 		}
 	});
-
-	useEffect(() => {
-		const initialNotes =
-			localStorage.length > 0
-				? JSON.parse(localStorage.getItem("notes-data"))
-				: [];
-
-		setNotes(initialNotes);
-	}, [setNotes]);
 
 	return (
 		<section id="notes">
 			<h3>Suas notas</h3>
 			<div className="notes-container">
-				{notes.length && notes.length > 0 ? (
+				{notes.length > 0 ? (
 					notes.map((note, index) => (
 						<Note
 							id={note.id}
