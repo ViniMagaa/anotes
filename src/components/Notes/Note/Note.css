@@ -47,8 +47,10 @@
 }
 
 .note-content .action-buttons {
+	width: 100%;
 	display: flex;
-	justify-content: flex-end;
+	justify-content: space-between;
+	align-items: flex-end;
 	gap: 5px;
 }
 

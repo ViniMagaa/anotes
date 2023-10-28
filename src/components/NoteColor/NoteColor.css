@@ -8,8 +8,8 @@
 }
 
 .box {
-	width: 40px;
-	height: 40px;
+	width: 2em;
+	height: 2em;
 	background-color: var(--light-gray);
 	border: var(--border);
 	border-radius: 5px;

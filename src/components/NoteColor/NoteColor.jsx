@@ -1,6 +1,6 @@
 import "./NoteColor.css";
 
-function NoteColor({ onColorChange }) {
+function NoteColor({ onColorChange, defaultColor }) {
 	const colors = ["yellow", "blue", "pink", "green"];
 
 	return (
@@ -16,7 +16,7 @@ function NoteColor({ onColorChange }) {
 									name="color"
 									id={`${color}-box`}
 									className="box"
-									defaultChecked={color === "yellow" ? true : false}
+									defaultChecked={color === defaultColor ? true : false}
 									onClick={() => onColorChange(color)}
 								/>
 								<label

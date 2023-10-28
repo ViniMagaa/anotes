@@ -67,10 +67,10 @@ function FormNewNote() {
 				color,
 			};
 
-			setNotes([newNoteData, ...notes]);
+			setNotes([...notes, newNoteData]);
 			localStorage.setItem(
 				"notes-data",
-				JSON.stringify([newNoteData, ...notes])
+				JSON.stringify([...notes, newNoteData])
 			);
 
 			// close form
@@ -78,12 +78,12 @@ function FormNewNote() {
 		}
 	}
 
-	function handleColorChange(color) {
-		setColor(color);
+	function handleColorChange(noteColor) {
+		setColor(noteColor);
 		const containerNote = document.getElementById("container-form-note");
 		const containerCloseForm = document.getElementById("container-close-form");
-		containerNote.style.backgroundColor = `var(--light-${color})`;
-		containerCloseForm.style.backgroundColor = `var(--medium-${color})`;
+		containerNote.style.backgroundColor = `var(--light-${noteColor})`;
+		containerCloseForm.style.backgroundColor = `var(--medium-${noteColor})`;
 	}
 
 	return (
@@ -132,7 +132,7 @@ function FormNewNote() {
 					<p id="error-content" className="error-form">
 						Adicione um conteúdo
 					</p>
-					<NoteColor onColorChange={handleColorChange} />
+					<NoteColor onColorChange={handleColorChange} defaultColor="yellow" />
 					<ButtonCreateNote handleClick={addNote} />
 				</form>
 			</div>

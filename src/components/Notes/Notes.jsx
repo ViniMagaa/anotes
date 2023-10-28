@@ -30,7 +30,7 @@ function Notes() {
 							id={note.id}
 							title={note.title}
 							content={note.content}
-							color={note.color}
+							noteColor={note.color}
 							key={index}
 						/>
 					))

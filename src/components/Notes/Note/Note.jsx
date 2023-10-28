@@ -1,16 +1,23 @@
 import { useContext, useState } from "react";
 
+import { AiOutlineCheckSquare, AiOutlineDelete } from "react-icons/ai";
 import { BiEdit } from "react-icons/bi";
-import { AiOutlineDelete, AiOutlineCheckSquare } from "react-icons/ai";
 
+import NoteColor from "../../NoteColor/NoteColor";
 import SimpleButton from "../../SimpleButton/SimpleButton";
 
-import "./Note.css";
 import NotesContext from "../../../context/NotesContext";
+import "./Note.css";
 
-function Note({ id, title, content, color }) {
+function Note({ id, title, content, noteColor }) {
+	const [color, setColor] = useState(noteColor);
 	const [isContentEditable, setIsContentEditable] = useState(false);
 	const { notes, setNotes } = useContext(NotesContext);
+
+	function handleColorChange(newColor) {
+		setColor(newColor);
+		notes[id].color = newColor;
+	}
 
 	function deleteNote() {
 		const newNotesData = notes.filter((note) => note.id !== id);
@@ -51,16 +58,21 @@ function Note({ id, title, content, color }) {
 			<div className="note-content">
 				<p id={`${id}-content`}>{content}</p>
 				<div className="action-buttons">
+					{isContentEditable && (
+						<NoteColor onColorChange={handleColorChange} defaultColor={color} />
+					)}
 					<SimpleButton
 						content={!isContentEditable ? <BiEdit /> : <AiOutlineCheckSquare />}
 						color={color}
 						handleClick={editNote}
 					/>
-					<SimpleButton
-						content={<AiOutlineDelete />}
-						color={color}
-						handleClick={deleteNote}
-					/>
+					{!isContentEditable && (
+						<SimpleButton
+							content={<AiOutlineDelete />}
+							color={color}
+							handleClick={deleteNote}
+						/>
+					)}
 				</div>
 			</div>
 		</div>
