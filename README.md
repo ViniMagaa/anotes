@@ -1,6 +1,6 @@
 # Projeto aNotes
 
-<a href="https://vinimagaa-anotes.vercel.app/" target="_blank">Clique aqui</a> para visitar o site de projeto em funcionamento.
+<a href="https://vinimagaa-anotes.vercel.app/" target="_blank">Clique aqui</a> para visitar o site do projeto em funcionamento.
 
 <img src="./src/img/website-images.png" alt="Imagens do site">
 
