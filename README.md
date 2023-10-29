@@ -6,7 +6,7 @@
 
 ## Descrição
 
-<img src="./src/img/logo.png" alt="logo" style="float: right">
+<img src="./src/img/logo.png" alt="logo" align="right">
 
 Este é um projeto completamente feito em React que permite a criação e edição de anotações. Essa é uma nova versão de um projeto já feito por mim com apenas **HTML**, **CSS**, e **JavaScript** que está [neste repositório](https://github.com/ViniMagaa/meus-projetos/tree/main/html-css-js/notas/) (confira a versão web [aqui](https://vinimagaa.github.io/meus-projetos/html-css-js/notas/)).
 
