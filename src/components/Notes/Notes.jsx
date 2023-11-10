@@ -25,13 +25,13 @@ function Notes() {
 			<h3>Suas notas</h3>
 			<div className="notes-container">
 				{notes.length > 0 ? (
-					notes.map((note, index) => (
+					notes.map((note) => (
 						<Note
+							key={note.id}
 							id={note.id}
 							title={note.title}
 							content={note.content}
 							noteColor={note.color}
-							key={index}
 						/>
 					))
 				) : (
