@@ -11,37 +11,25 @@ function ButtonToggleMode() {
 	function darkMode() {
 		localStorage.setItem("mode", "dark");
 		setMode("dark");
-		document.documentElement.style.setProperty("--bg-color", "#222");
-		document.documentElement.style.setProperty("--header-color", "#444");
-		document.documentElement.style.setProperty(
-			"--span-color",
-			"var(--light-blue)"
-		);
-		document.documentElement.style.setProperty(
-			"--text-color",
-			"var(--light-gray)"
-		);
-		document.documentElement.style.setProperty("--light-yellow", "#AB7D38");
-		document.documentElement.style.setProperty("--medium-yellow", "#5E451F");
-		document.documentElement.style.setProperty("--light-blue", "#383A7E");
-		document.documentElement.style.setProperty("--medium-blue", "#272959");
-		document.documentElement.style.setProperty("--light-pink", "#C84771");
-		document.documentElement.style.setProperty("--medium-pink", "#62374E");
-		document.documentElement.style.setProperty("--light-green", "#519872");
-		document.documentElement.style.setProperty("--medium-green", "#3B5249");
-		document.documentElement.style.setProperty("--light-gray", "#eee");
-		document.documentElement.style.setProperty("--dark-gray", "#444");
-		document.documentElement.style.setProperty(
-			"--border",
-			"3px solid var(--light-gray)"
-		);
-		document.documentElement.style.setProperty(
-			"--box-shadow",
-			"3px 3px 0 var(--light-gray)"
-		);
-		document.documentElement.style.setProperty(
-			"--box-shadow-hover",
-			"7px 7px 0 var(--light-gray)"
+		document.documentElement.style.cssText(
+			`--bg-color #222;
+			--bg-color: #222; 
+			--header-color: #444; 
+			--span-color: var(--light-blue); 
+			--text-color: var(--light-gray); 
+			--light-yellow: #AB7D38; 
+			--medium-yellow: #5E451F;
+			--light-blue: #383A7E;
+			--medium-blue: #272959;
+			--light-pink: #C84771;
+			--medium-pink: #62374E;
+			--light-green: #519872;
+			--medium-green: #3B5249;
+			--light-gray: #eee;
+			--dark-gray: #444;
+			--border: 3px solid var(--light-gray);
+			--box-shadow: 3px 3px 0 var(--light-gray); 
+			--box-shadow-hover: 7px 7px 0 var(--light-gray);`
 		);
 		document.body.style.color = "var(--light-gray)";
 	}
@@ -49,40 +37,25 @@ function ButtonToggleMode() {
 	function lightMode() {
 		localStorage.setItem("mode", "light");
 		setMode("light");
-		document.documentElement.style.setProperty("--bg-color", "#F9F3E5");
-		document.documentElement.style.setProperty(
-			"--header-color",
-			"var(--medium-yellow)"
-		);
-		document.documentElement.style.setProperty(
-			"--span-color",
-			"var(--medium-blue)"
-		);
-		document.documentElement.style.setProperty(
-			"--text-color",
-			"var(--dark-gray)"
-		);
-		document.documentElement.style.setProperty("--light-yellow", "#F5D89A");
-		document.documentElement.style.setProperty("--medium-yellow", "#ffd16f");
-		document.documentElement.style.setProperty("--light-blue", "#9ABAF5");
-		document.documentElement.style.setProperty("--medium-blue", "#5791fd");
-		document.documentElement.style.setProperty("--light-pink", "#F59AC8");
-		document.documentElement.style.setProperty("--medium-pink", "#ff79bc");
-		document.documentElement.style.setProperty("--light-green", "#9AF59A");
-		document.documentElement.style.setProperty("--medium-green", "#5de35d");
-		document.documentElement.style.setProperty("--light-grey", "#A09886");
-		document.documentElement.style.setProperty("--dark-gray", "#33322E");
-		document.documentElement.style.setProperty(
-			"--border",
-			"3px solid var(--dark-gray)"
-		);
-		document.documentElement.style.setProperty(
-			"--box-shadow",
-			"3px 3px 0px var(--dark-gray)"
-		);
-		document.documentElement.style.setProperty(
-			"--box-shadow-hover",
-			"7px 7px 0px var(--dark-gray)"
+		document.documentElement.style.cssText(`
+		--bg-color: #F9F3E5;
+		--header-color: var(--medium-yellow);
+		--span-color: var(--medium-blue); 
+		--text-color: var(--dark-gray);
+		--light-yellow: #F5D89A;
+		--medium-yellow: #ffd16f;
+		--light-blue: #9ABAF5;
+		--medium-blue: #5791fd;
+		--light-pink: #F59AC8;
+		--medium-pink: #ff79bc; 
+		--light-green: #9AF59A;
+		--medium-green: #5de35d; 
+		--light-gray: #eee; 
+		--dark-gray: #33322E; 
+		--border: 3px solid var(--dark-gray); 
+		--box-shadow: 3px 3px 0px var(--dark-gray); 
+		--box-shadow-hover: 7px 7px 0px var(--dark-gray); 
+		--light-grey: #A09886;`
 		);
 		document.body.style.color = "#111";
 	}
@@ -110,7 +83,7 @@ function ButtonToggleMode() {
 		} else {
 			darkMode();
 		}
-	}, [mode])
+	}, [mode]);
 
 	return (
 		<button className="mode" onClick={toggleMode}>
